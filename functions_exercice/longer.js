@@ -1,19 +1,13 @@
 // Ecrivez une fonction `longer` qui accepte deux chaînes de caractères comme argument. 
 // La fonction doit retourner la chaîne la plus longue. Si les chaînes de caractères ont la même longueur, alors la première chaîne est retournée.
-function longer(string){
-    let list=string.split(" ")
-    let longest=0;
-    let position=0
-    for (i=0;i<list.length;i++){
-        if (longest<list[i].length){
-            longest=list[i].length;
-            position=i;
-        }
-        else{
-            continue
-        }
+function longer(string1,string2){
+    if (string1.length<string2.length){
+        resultat=string2;
     }
-    return list[position]
+    else{
+        resultat=string1;
+    }
+    return resultat
 }
 
 console.log(longer("drum", "piranha")) ; // 'piranha'.

@@ -2,22 +2,9 @@
 // La fonction doit renvoyer un booléen indiquant si oui ou non `str2` est contenue dans `str1`. 
 // La fonction doit ignorer toute différence de capitalisation.
 function contains(str1,str2){
-    let list=[""]
-    function portion(str1){
-        for (i=0;i<str2.length;i++){
-            var compare=str1.substr(i,i+(str2.length));
-            list.push(compare)
-        }
-        return list
-    }
-    for (i=0;i<list.length;i++){
-        if (list[i].toLowerCase()==str2.toLowerCase()){
-            resultat=true;
-        }
-        else {
-            resultat=false;
-        }
-    }
+    let str1lowercase=str1.toLowerCase();
+    let str2lowercase=str2.toLowerCase();
+    resultat=str1lowercase.includes(str2lowercase)
     return resultat
 }
 
